@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const SignupPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -11,39 +13,29 @@ const SignupPage = () => {
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
           <form className="space-y-6" action="#" method="POST">
             <div>
-              <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
-                First name
+              <label
+                htmlFor="firstName"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Full name
               </label>
               <div className="mt-1">
                 <input
-                  id="firstName"
-                  name="firstName"
+                  id="fullName"
+                  name="fullName"
                   type="text"
                   required
                   className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
-                  placeholder="Enter your first name"
+                  placeholder="Enter your full name"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
-                Last name
-              </label>
-              <div className="mt-1">
-                <input
-                  id="lastName"
-                  name="lastName"
-                  type="text"
-                  required
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
-                  placeholder="Enter your last name"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Email address
               </label>
               <div className="mt-1">
@@ -60,7 +52,10 @@ const SignupPage = () => {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Password
               </label>
               <div className="mt-1">
@@ -83,7 +78,10 @@ const SignupPage = () => {
                 type="checkbox"
                 className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
               />
-              <label htmlFor="terms" className="ml-2 block text-sm text-gray-900">
+              <label
+                htmlFor="terms"
+                className="ml-2 block text-sm text-gray-900"
+              >
                 I agree to the Terms of Service and Privacy Policy
               </label>
             </div>
@@ -103,10 +101,13 @@ const SignupPage = () => {
           </p>
 
           <p className="mt-2 text-center text-sm text-gray-600">
-            Already have an account?{' '}
-            <a href="#" className="font-medium text-green-600 hover:text-green-500">
-              Sign in
-            </a>
+            Already have an account?{" "}
+            <Link
+              href="/login"
+              className="font-medium text-teal hover:text-green-500"
+            >
+              Log in
+            </Link>
           </p>
         </div>
       </div>
