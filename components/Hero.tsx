@@ -37,7 +37,7 @@ function Hero() {
                 className="bg-lightGrey w-full focus:outline-none"
               />
             </div>
-            <button className="py-2 px-2 rounded-md shadow-sm bg-teal text-white">
+            <button className="py-2 px-2 rounded-md shadow-sm bg-teal text-white capitalize">
               Talk to a therapist
             </button>
           </div>
